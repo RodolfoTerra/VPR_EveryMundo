@@ -7,7 +7,7 @@ import '../../ui/pages/home/home.js';
 import '../../ui/pages/not-found/not-found.js';
 
 // Import templates pages to VPR
-import '../../ui/pages/users/user-list.js';
+import '../../ui/pages/users/user.js';
 
 
 // Set up all routes in the app
@@ -28,5 +28,12 @@ FlowRouter.route('/users', {
   name: 'App.users',
   action() {
     BlazeLayout.render('App_body', { main: 'userList' });
+  },
+});
+
+FlowRouter.route('/users-add', {
+  name: 'App.users-add',
+  action() {
+    BlazeLayout.render('App_body', { main: 'userAdd' });
   },
 });
